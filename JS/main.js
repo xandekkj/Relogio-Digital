@@ -18,3 +18,12 @@ const relogio = setInterval(function time() {
     minutos.textContent = min;
     segundos.textContent = s;
 })
+
+// Dark mode
+
+const html = document.querySelector('html');
+const checkbox = document.querySelector('.checkbox');
+
+  checkbox.addEventListener('change', function() {
+      html.classList.toggle('dark-mode');
+  })

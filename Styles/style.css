@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
 
+:root {
+    --cor-primaria: #B0DAFF;
+    --cor-secundaria: #068DA9; 
+}
+
+.dark-mode:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #443C68;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +18,7 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(120deg, #ffe53bd8, #ff2525da);
+    background: linear-gradient(120deg, var(--cor-primaria), var(--cor-secundaria));
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,4 +55,70 @@ body {
 
 .relogio span.tempo {
     font-size: 0.9em;
+}
+
+.btn {
+    width: 7em;
+    height: 3.2em;
+    position: absolute;
+    top: 20px;
+    right: 240px;
+}
+
+#dark {
+    width: 8em;
+    height: 1em;
+    position: absolute;
+    top: 20px;
+    right: 1px;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+label input:checked + span {
+    color: #B0DAFF;
+}
+
+.container{
+    position: absolute;
+    right: 70px;
+    top: 3%;
+}
+
+.checkbox{
+    display: flex;
+    gap: 0.6rem;
+    padding: 0.4rem;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 0.5rem;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+       rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.checkbox > input{
+    appearance: none;
+    width: 0.8rem;
+    height: 1.2rem;
+    border-radius: 0.2rem;
+}
+
+.checkbox > input:checked::before{
+    content: "✓";
+    font-size: 1.8rem;
+    font-weight: 800;
+    position: absolute;
+    top: -0.4rem;
+    left: 0.4rem;
+}
+.checkbox >label{
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.125rem;
+    color: var(--cor-primaria);
+}
+
+#text {
+    font-size: large
 }
