@@ -33,4 +33,16 @@ body {
     justify-content: center;
     color: #fff;
     background: rgba(5, 5, 5, .9);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .7);
+    border-radius: 0.9em;
+    letter-spacing: 3px;
+}
+
+.relogio span {
+    font-weight: bolder;
+    font-size: 3.75em;
+}
+
+.relogio span.tempo {
+    font-size: 0.9em;
 }
